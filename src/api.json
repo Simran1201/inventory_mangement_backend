@@ -1,0 +1,66 @@
+{
+  "info": {
+    "name": "Inventory Management API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Signup",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "url": "{{baseUrl}}/auth/register",
+        "body": {
+          "mode": "raw",
+          "raw": "{\n\"name\":\"Simran\",\n\"email\":\"simran@test.com\",\n\"password\":\"123456\",\n\"role\":\"user\"\n}"
+        }
+      }
+    },
+    {
+      "name": "Login",
+      "request": {
+        "method": "POST",
+        "url": "{{baseUrl}}/auth/login",
+        "body": {
+          "mode": "raw",
+          "raw": "{\n\"email\":\"admin@test.com\",\n\"password\":\"123456\"\n}"
+        }
+      }
+    },
+    {
+      "name": "Create Product",
+      "request": {
+        "method": "POST",
+        "url": "{{baseUrl}}/products"
+      }
+    },
+    {
+      "name": "Get Products",
+      "request": {
+        "method": "GET",
+        "url": "{{baseUrl}}/products"
+      }
+    },
+    {
+      "name": "Place Order",
+      "request": {
+        "method": "POST",
+        "url": "{{baseUrl}}/orders"
+      }
+    },
+    {
+      "name": "My Orders",
+      "request": {
+        "method": "GET",
+        "url": "{{baseUrl}}/orders/my-orders"
+      }
+    },
+    {
+      "name": "Admin Orders",
+      "request": {
+        "method": "GET",
+        "url": "{{baseUrl}}/orders"
+      }
+    }
+  ]
+}
